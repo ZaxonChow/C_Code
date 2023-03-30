@@ -1,21 +1,10 @@
-﻿生成启动时间为 2023/3/19 22:44:52。
-     1>项目“E:\VS 2010\C_Code\2023_03_19\Learning\Learning\Learning.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
-         正在创建“Debug\Learning.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-       ClCompile:
-         F:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt 2023_03_19.c
-         2023_03_19.c
-       Link:
-         F:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Learning.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.lib" /MACHINE:X86 Debug\2023_03_19.obj
-         LINK : 没有找到 E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.exe 或上一个增量链接没有生成它；正在执行完全链接
-         Learning.vcxproj -> E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\VS 2010\C_Code\2023_03_19\Learning\Debug\Learning.exe;#1" /manifest Debug\Learning.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         正在删除文件“Debug\Learning.unsuccessfulbuild”。
-         正在对“Debug\Learning.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\VS 2010\C_Code\2023_03_19\Learning\Learning\Learning.vcxproj”(build 个目标)的操作。
+﻿生成启动时间为 2023/3/30 13:30:08。
+     1>项目“D:\Github\C_Code\C_Code\2023_03_29\Learning\Learning\Learning.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         D:\Software\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\C_Code\C_Code\2023_03_29\Learning\Debug\Learning.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Github\C_Code\C_Code\2023_03_29\Learning\Debug\Learning.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\C_Code\C_Code\2023_03_29\Learning\Debug\Learning.lib" /MACHINE:X86 Debug\2023_03_19.obj
+         Learning.vcxproj -> D:\Github\C_Code\C_Code\2023_03_29\Learning\Debug\Learning.exe
+     1>已完成生成项目“D:\Github\C_Code\C_Code\2023_03_29\Learning\Learning\Learning.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.70
+已用时间 00:00:00.38

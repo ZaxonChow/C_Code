@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-//int main()
-//{
-//	int a = 0;
-//	int b = 0;
-//	int sum = 0;
-//	sum = a + b;
-//	printf("和为：%d\n", sum);
-//	return 0;
-//}
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int sum = 0;
+	sum = a + b;
+	printf("和为：%d\n", sum);
+	return 0;
+}
