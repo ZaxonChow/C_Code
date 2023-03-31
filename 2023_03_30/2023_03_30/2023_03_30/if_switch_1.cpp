@@ -4,7 +4,13 @@
 
 int main()
 {
-	int i = 1;
+	//ctrl + z
+	//EOF end of file
+	int ch = getchar();
+	putchar(ch);
+	printf("%c\n", ch);
+	return 0;
+	/*int i = 1;
 	while (10 >= i)
 	{
 		if (5 == i)
@@ -15,7 +21,7 @@ int main()
 		printf("%d\t", i);
 		i++;
 	}
-	return 0;
+	return 0;*/
 	/*int n = 1;
 	int m = 2;
 	switch (n)
