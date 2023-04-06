@@ -4,26 +4,26 @@
 #include<stdlib.h>
 #include<time.h>
 
-//int main()
-//{
-//	//关机程序
-//	//shutdown -s -t 60
-//	//system() - 执行系统命令
-//	char input[50] = { 0 };
-//	system("shutdown -s -t 180");
-//again:
-//	printf("请注意，您的电脑将在 3 分钟内关机，如果输入：猛超很帅，就取消关机\n请输入：");
-//	scanf("%s", input);
-//	if (strcmp(input, "猛超很帅") == 0)
-//	{
-//		system("shutdown -a");
-//	}
-//	else
-//	{
-//		goto again;
-//	}
-//	return 0;
-//}
+int main()
+{
+	//关机程序
+	//shutdown -s -t 60
+	//system() - 执行系统命令
+	char input[50] = { 0 };
+	system("shutdown -s -t 30");
+again:
+	printf("请注意，您的电脑将在 30s 内关机，如果输入：猛超很帅，就取消关机\n请输入：");
+	scanf("%s", input);
+	if (strcmp(input, "猛超很帅") == 0)
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		goto again;
+	}
+	return 0;
+}
 
 //int main()
 //{
