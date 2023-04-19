@@ -10,6 +10,11 @@ void menu()
 	printf("**********************\n");
 }
 
+void game()
+{
+	char board[9][9];
+}
+
 void test()
 {
 	int input = 0;
