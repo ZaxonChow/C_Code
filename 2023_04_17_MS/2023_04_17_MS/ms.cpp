@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
 #include"game.h"
 
 void menu()
@@ -12,16 +11,32 @@ void menu()
 
 void game()
 {
-	char board[9][9];
+	//储存雷的信息
+	//1.布置好的雷的信息
+	char mine[ROWS][COLS] = { 0 };
+	//2.排查出的雷的信息
+	char show[ROWS][COLS] = { 0 };
+	//初始化
+	InitBoard(mine, ROWS, COLS, '0');
+	InitBoard(show, ROWS, COLS, '*');
+	//打印棋盘
+	DisplayBoard(mine, ROW, COL);
+	//DisplayBoard(show, ROW, COL);
+	//布置雷
+	SetMine(mine, ROW,COL);
+	//扫雷
+	//DisplayBoard(mine, ROW, COL);
+	FindMine(mine, show, ROW, COL);
 }
 
 void test()
 {
+	srand((unsigned int)time(NULL));
 	int input = 0;
 	do
 	{
-		menu();
-		printf("请选择：\n");
+		menu();//打印开始菜单
+		printf("请选择：");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -40,6 +55,6 @@ void test()
 
 int main()
 {
-
+	test();
 	return 0;
 }
