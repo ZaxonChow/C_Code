@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2023_04_25_struct", "2023_04_25_struct\2023_04_25_struct.vcxproj", "{2E4CEC03-A97A-498C-A686-EAB51DDB3C1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E4CEC03-A97A-498C-A686-EAB51DDB3C1D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E4CEC03-A97A-498C-A686-EAB51DDB3C1D}.Debug|Win32.Build.0 = Debug|Win32
+		{2E4CEC03-A97A-498C-A686-EAB51DDB3C1D}.Release|Win32.ActiveCfg = Release|Win32
+		{2E4CEC03-A97A-498C-A686-EAB51DDB3C1D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
