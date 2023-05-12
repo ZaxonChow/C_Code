@@ -79,14 +79,40 @@ void test3()
 	}
 }
 
+//int main()
+//{
+//	//memcpy
+//	//test1();
+//	//test2();
+//
+//	//memmove
+//	//内存重叠部分由memmove实现
+//	test3();
+//	return 0;
+//}
+
+//int main()
+//{
+//	//memcmp
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 1,3,2 };
+//	int ret = memcmp(arr1, arr2, 12);//相等为0
+//	printf("%d", ret);
+//	return 0;
+//}
+
 int main()
 {
-	//memcpy
-	//test1();
-	//test2();
-
-	//memmove
-	//内存重叠部分由memmove实现
-	test3();
+	//memset - 内存设置
+	//以字节为单位设置
+	//char arr[] = "hello bit";
+	////memset(arr, 'x', 5);
+	//memset(arr + 6, 'x', 3);
+	//printf("%s\n", arr);
+	
+	int arr[10] = { 0 };
+	//把arr初始化为全1
+	memset(arr, 1, 40);
+	//不可行
 	return 0;
 }
