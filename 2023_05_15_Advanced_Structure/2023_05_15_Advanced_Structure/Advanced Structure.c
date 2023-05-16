@@ -71,30 +71,64 @@ struct S4
 //}
 
 //修改默认对齐数
-#pragma pack(4)
+//#pragma pack(4)
+//
+//struct S
+//{
+//	int i;
+//	double d;
+//};
+//#pragma pack()
+//
+//#pragma pack(1)
+//struct S1
+//{
+//	char c1;//1
+//	int i;//4
+//	char c2;//1
+//};
+//#pragma pack()
+//
+//#pragma once
+//头文件中使用，功能：防止头文件被多次引用
+
+//int main()
+//{
+//	printf("%d\n", sizeof(struct S));
+//	printf("%d\n", sizeof(struct S1));
+//	return 0;
+//}
 
 struct S
 {
-	int i;
-	double d;
+	int data[1000];
+	int num;
 };
-#pragma pack()
 
-#pragma pack(1)
-struct S1
+void print1(struct S ss)
 {
-	char c1;//1
-	int i;//4
-	char c2;//1
-};
-#pragma pack()
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		printf("%d ", ss.data[i]);
+	}
+	printf("%d\n", ss.num);
+}
 
-#pragma once
-//头文件中使用，功能：防止头文件被多次引用
+void print2(const struct S* ps)
+{
+	int i = 0;
+	for (i = 0; i < 3; i++)
+	{
+		printf("%d ", ps->data[i]);
+	}
+	printf("%d\n", ps->num);
+}
 
 int main()
 {
-	printf("%d\n", sizeof(struct S));
-	printf("%d\n", sizeof(struct S1));
+	struct S s = { {1,2,3}, 100 };
+	print1(s);//传值调用
+	print2(&s);//传址调用 - 更佳
 	return 0;
 }
