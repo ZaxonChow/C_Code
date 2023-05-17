@@ -2,7 +2,9 @@
 
 #include "AddressList.h"
 
-
+//1.静态的版本
+//2.动态的版本
+//3.文件的版本
 
 //通讯录
 //人的信息：名字、年龄、性别、电话、地址
@@ -44,16 +46,16 @@ int main()
 			DelContact(&con);
 			break;
 		case 3://查找成员信息
-
+			SearchContact(&con);
 			break;
 		case 4://修改成员信息
-
+			ModifyContact(&con);
 			break;
 		case 5://显示成员信息
 			ShowContact(&con);
 			break;
 		case 6://排列成员信息
-
+			SortContact(&con);
 			break;
 		case 0://退出通讯录
 			printf("退出通信录\n");

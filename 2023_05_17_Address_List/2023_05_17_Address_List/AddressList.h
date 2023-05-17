@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#include <stdlib.h>
 
 #define MAX 100
 #define MAX_NAME 20
@@ -33,4 +34,6 @@ void InitContact(Contact* pc);//初始化通讯录
 void AddContact(Contact* pc);//增加成员信息
 void ShowContact(const Contact* pc);//显示成员信息
 void DelContact(Contact* pc);//删除成员信息
-
+void SearchContact(const Contact* pc);//查找成员信息
+void ModifyContact(Contact* pc);//修改成员信息
+void SortContact(Contact* pc);//排序成员信息
