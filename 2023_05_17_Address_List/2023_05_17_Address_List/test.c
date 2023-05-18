@@ -15,6 +15,17 @@
 //5.排序
 //6.显示联系人
 
+enum Option
+{
+	EXIT,
+	ADD,
+	DEL,
+	SEARCH,
+	MODIFY,
+	SHOW,
+	SORT
+};
+
 void menu()
 {
 	printf("*********************************\n");
@@ -39,25 +50,25 @@ int main()
 		scanf("%d", &input);
 		switch (input)
 		{
-		case 1://增加成员信息
+		case ADD://增加成员信息
 			AddContact(&con);
 			break;
-		case 2://删除成员信息
+		case DEL://删除成员信息
 			DelContact(&con);
 			break;
-		case 3://查找成员信息
+		case SEARCH://查找成员信息
 			SearchContact(&con);
 			break;
-		case 4://修改成员信息
+		case MODIFY://修改成员信息
 			ModifyContact(&con);
 			break;
-		case 5://显示成员信息
+		case SHOW://显示成员信息
 			ShowContact(&con);
 			break;
-		case 6://排列成员信息
+		case SORT://排列成员信息
 			SortContact(&con);
 			break;
-		case 0://退出通讯录
+		case EXIT://退出通讯录
 			printf("退出通信录\n");
 			break;
 		default://选择错误
