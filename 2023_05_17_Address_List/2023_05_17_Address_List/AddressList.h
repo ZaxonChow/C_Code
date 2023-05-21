@@ -4,7 +4,11 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <string.h>
+#include <errno.h>
 
+#define DEFAULT_SZ 3
+#define INC_SZ 2
 #define MAX 100
 #define MAX_NAME 20
 #define MAX_SEX 10
@@ -24,13 +28,26 @@ typedef struct PeoInfo
 }PeoInfo;
 
 //通信录
+// 静态版本
+//typedef struct Contact
+//{
+//	PeoInfo data[MAX];//存放人的信息
+//	int count;//记录当前通讯录中实际人数
+//}Contact;
+
+//动态版本
 typedef struct Contact
 {
-	PeoInfo data[MAX];//存放人的信息
+	PeoInfo* data;//存放人的信息
 	int count;//记录当前通讯录中实际人数
+	//当前通讯录容量
+	//默认3
+	//增加2
+	int capacity;
 }Contact;
 
-void InitContact(Contact* pc);//初始化通讯录
+int InitContact(Contact* pc);//初始化通讯录
+void DestroyContact(Contact* pc);//销毁通讯录
 void AddContact(Contact* pc);//增加成员信息
 void ShowContact(const Contact* pc);//显示成员信息
 void DelContact(Contact* pc);//删除成员信息

@@ -14,6 +14,8 @@
 //4.查找联系人
 //5.排序
 //6.显示联系人
+//默认够存放3个人信息
+//每次增加2个空间位置
 
 enum Option
 {
@@ -69,6 +71,7 @@ int main()
 			SortContact(&con);
 			break;
 		case EXIT://退出通讯录
+			DestroyContact(&con);
 			printf("退出通信录\n");
 			break;
 		default://选择错误
