@@ -91,8 +91,20 @@
 //	return 0;//Õý³£·µ»Ø
 //}
 
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
+//	//...
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
 int main()
 {
-
+	//malloc
+	int* p = NULL;
+	free(p);
 	return 0;
 }
