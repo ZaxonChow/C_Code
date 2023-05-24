@@ -59,6 +59,9 @@
 *.obj
 *.pdb
 *.recipe
+*.db-shm
+*.db-wal
+*.opendb
 
 
 # Kernel Module Compile Results

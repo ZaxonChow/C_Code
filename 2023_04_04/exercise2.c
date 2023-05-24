@@ -11,7 +11,7 @@ int main()
 	int j = 0;
 	int count = 0;
 	//for(i = 100; i <= 200; i++)
-	for (i = 101; i < 200; i+=2)
+	for (i = 101; i < 200; i += 2)
 	{
 		for (j = 2; j <= sqrt(i); j++)
 		{
