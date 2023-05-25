@@ -64,6 +64,7 @@
 *.opendb
 *.json
 *.sqlite
+*.sdf
 
 
 # Kernel Module Compile Results
