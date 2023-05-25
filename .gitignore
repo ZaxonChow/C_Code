@@ -62,6 +62,8 @@
 *.db-shm
 *.db-wal
 *.opendb
+*.json
+*.sqlite
 
 
 # Kernel Module Compile Results

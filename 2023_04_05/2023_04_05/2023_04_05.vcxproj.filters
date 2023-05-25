@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="exercise3.cpp">
+    <ClCompile Include="..\exercise3.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
