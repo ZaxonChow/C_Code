@@ -54,3 +54,5 @@ void DelContact(Contact* pc);//删除成员信息
 void SearchContact(const Contact* pc);//查找成员信息
 void ModifyContact(Contact* pc);//修改成员信息
 void SortContact(Contact* pc);//排序成员信息
+void SaveContact(const Contact* pc);//保存成员信息
+void LoadContact(Contact* pc);//加载文件中成员信息

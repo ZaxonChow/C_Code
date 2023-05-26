@@ -10,6 +10,53 @@
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
 
+void CheckCapacity(Contact* pc)
+{
+	//增容
+	if (pc->capacity == pc->count)
+	{
+		//空间不够，增容
+		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+		if (ptr == NULL)
+		{
+			printf("AddContact:%s\n", strerror(errno));
+			return;
+		}
+		else
+		{
+			pc->data = ptr;
+			pc->capacity += INC_SZ;
+			printf("增容成功\n");
+		}
+	}
+}
+
+void LoadContact(Contact* pc)
+{
+	//加载文件信息
+	FILE* pfRead = fopen("contact.txt", "rb");
+	if (pfRead == NULL)
+	{
+		perror("LoadContact");
+		return;
+	}
+	//读文件信息
+	PeoInfo tmp = { 0 };
+	
+	while (1 == fread(&tmp, sizeof(PeoInfo), 1, pfRead))
+	{
+		CheckCapacity(pc);//检查是否增容
+
+		pc->data[pc->count] = tmp;
+		pc->count++;
+	}
+
+	//关闭文件
+	fclose(pfRead);
+	pfRead = NULL;
+	printf("通讯录读取成功\n");
+}
+
 //动态版本
 int InitContact(Contact* pc)
 {
@@ -23,7 +70,31 @@ int InitContact(Contact* pc)
 		return 1;
 	}
 	pc->capacity = DEFAULT_SZ;
+	//加载文件的信息到通讯录中
+	LoadContact(pc);
 	return 0;
+}
+
+void SaveContact(const Contact* pc)
+{
+	//保存通讯录
+	assert(pc);
+	FILE* pfWrite = fopen("contact.txt", "wb");
+	if (pfWrite == NULL)
+	{
+		perror("SaveContact");
+		return;
+	}
+	//写文件-二进制的形式写
+	int i = 0;
+	for (i = 0; i < pc->count; i++)
+	{
+		fwrite(pc->data + i, sizeof(PeoInfo), 1, pfWrite);
+	}
+	//关闭文件
+	fclose(pfWrite);
+	pfWrite = NULL;
+	printf("通讯录信息已保存\n");
 }
 
 void DestroyContact(Contact* pc)
@@ -60,26 +131,6 @@ void DestroyContact(Contact* pc)
 //	pc->count++;
 //	printf("添加成功！\n");
 //}
-
-void CheckCapacity(Contact* pc)
-{
-	if (pc->capacity == pc->count)
-	{
-		//空间不够，增容
-		PeoInfo* ptr = (PeoInfo*)realloc(pc->data, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
-		if (ptr == NULL)
-		{
-			printf("AddContact:%s\n", strerror(errno));
-			return;
-		}
-		else
-		{
-			pc->data = ptr;
-			pc->capacity += INC_SZ;
-			printf("增容成功\n");
-		}
-	}
-}
 
 //动态的版本
 void AddContact(Contact* pc)
@@ -120,7 +171,7 @@ void ShowContact(const Contact* pc)
 	}
 }
 
-static int FindByName(Contact* pc, char name[])
+static int FindByName(const Contact* pc, char name[])
 {
 	assert(pc);
 	int i = 0;

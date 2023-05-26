@@ -71,6 +71,7 @@ int main()
 			SortContact(&con);
 			break;
 		case EXIT://退出通讯录
+			SaveContact(&con);
 			DestroyContact(&con);
 			printf("退出通信录\n");
 			break;
