@@ -16,26 +16,61 @@
 //序列化
 //反序列化
 
-struct S
-{
-	char arr[10];
-	int age;
-	float score;
-};
+//struct S
+//{
+//	char arr[10];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { "zhangsan", 20, 55.5f };
+//	struct S tmp = { 0 };
+//	char buf[100] = { 0 };
+//	//把s中的格式化数据，转换成字符串，放到buf中
+//	sprintf(buf, "%s %d %f", s.arr, s.age, s.score);
+//	//"zhangsan 20 55.500000"
+//	printf("字符串形式：%s\n", buf);
+//
+//	//从字符串buf中获取一个格式化的数据到tmp中
+//	sscanf(buf, "%s %d %f", tmp.arr, &(tmp.age), &(tmp.score));
+//	printf("格式化形式：%s %d %f\n", tmp.arr, tmp.age, tmp.score);
+//	return 0;
+//}
 
+
+//随机读写
+//fseek
+//ftell算偏移量
+//rewind回到起始位置
 int main()
 {
-	struct S s = { "zhangsan", 20, 55.5f };
-	struct S tmp = { 0 };
-	char buf[100] = { 0 };
-	//把s中的格式化数据，转换成字符串，放到buf中
-	sprintf(buf, "%s %d %f", s.arr, s.age, s.score);
-	//"zhangsan 20 55.500000"
-	printf("字符串形式：%s\n", buf);
+	FILE* pf = fopen("text.txt", "r");
+	if (pf == NULL)
+	{
+		printf("%s\n", strerror(errno));
+		return 1;
+	}
+	//读文件
+	//定位文件指针
+	fseek(pf, 2, SEEK_SET);//从文件开始算偏移量
+	int ch = fgetc(pf);
+	printf("%c\n", ch);
+	printf("%d\n", ftell(pf));//文件指针相对于开始偏移量
 
-	//从字符串buf中获取一个格式化的数据到tmp中
-	sscanf(buf, "%s %d %f", tmp.arr, &(tmp.age), &(tmp.score));
-	printf("格式化形式：%s %d %f\n", tmp.arr, tmp.age, tmp.score);
+	//fseek(pf, 2, SEEK_CUR);//从当前算偏移量
+	fseek(pf, -1, SEEK_END);//从末尾算偏移量
+	ch = fgetc(pf);
+	printf("%c\n", ch);
+	printf("%d\n", ftell(pf));
+	//回到初始位置
+	rewind(pf);
+	ch = fgetc(pf);
+	printf("%c\n", ch);
+	//关闭文件
+	fclose(pf);
+	pf = NULL;
+
 	return 0;
 }
-
