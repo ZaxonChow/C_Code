@@ -1,0 +1,10 @@
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=0
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=1
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=2
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=3
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=4
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=5
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=6
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=7
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=8
+file:D:\Github\C_Code\2023_05_29_Pretreatment\pretreatment.c line=33 date:May 29 2023 time:16:59:07 i=9
